@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOR 4 Design Studio</title>
+    <meta name="description" content="BOR 4 Design by Petra Nacheva — interior and exterior design, 3D visualisation and project supervision.">
+    <link href="site.css" rel="stylesheet" />
+    <link rel="preload" as="image" href="bg.webp" type="image/webp" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#home" class="logo">
+                <img src="logo.svg" alt="bor4" />
+                <span class="text1">DESIGN</span>
+                <span class="text2">by Petra Nacheva</span>
+            </a>
+
+            <button class="burger"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-menu">
+                <span aria-hidden="true">&#9776;</span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#interiors">INTERIORS</a></li>
+                <li><a href="#exteriors">EXTERIORS</a></li>
+                <li><a href="#contact">CONTACTS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ============ HOME ============ -->
+        <section id="home">
+            <div class="content">
+                <img src="pic.webp" width="1800" height="1238" fetchpriority="high" alt="Interior visualisation — living room with kitchen island" />
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/bor4d" aria-label="Facebook" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 25.64 25.64"><path d="M10 6.71l0 2.12 -2.82 0 0 4.04 2.82 0 0 10.65 4.23 0 0 -10.65 3.66 0c0.25,0 0.21,-0.33 0.25,-0.9 0.03,-0.35 0.08,-0.72 0.12,-1.04l0.2 -2.1 -3.78 0c0,-1.57 -0.26,-2.63 0.71,-2.63l3.08 0 0 -4.04c-1.87,0 -3.73,-0.18 -5.35,0.36 -1.76,0.58 -3.12,2.13 -3.12,4.19z" /></svg>
+                </a>
+                <a href="https://www.instagram.com/bor4.d" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 25.64 25.64"><rect x="4.4" y="4.4" width="16.84" height="16.84" rx="5.2" /><circle cx="12.82" cy="12.82" r="3.9" /><circle class="dot" cx="17.6" cy="8.1" r="0.7" /></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section id="services" class="page-section">
+            <h2 class="section-title"><span class="num">01</span>Services</h2>
+            <p class="section-intro">
+                From the first sketch to the last detail on site — spaces designed around the people who live in them.
+            </p>
+
+            <!-- TODO: edit the service texts as needed -->
+            <ol class="services-grid">
+                <li class="service">
+                    <span class="service-num">01</span>
+                    <h3>Interior design</h3>
+                    <p>Concept, space planning, lighting, materials and furniture selection for homes, offices and hospitality spaces.</p>
+                </li>
+                <li class="service">
+                    <span class="service-num">02</span>
+                    <h3>Exterior design</h3>
+                    <p>Facades, terraces, entrances and outdoor living areas that continue the character of the interior.</p>
+                </li>
+                <li class="service">
+                    <span class="service-num">03</span>
+                    <h3>3D visualisation</h3>
+                    <p>Photorealistic renders, so you can see and feel the space before a single wall is built.</p>
+                </li>
+                <li class="service">
+                    <span class="service-num">04</span>
+                    <h3>Supervision</h3>
+                    <p>Technical drawings, sourcing and on-site coordination with contractors through to completion.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============ INTERIORS ============
+             Each <article class="project"> is one project.
+             To add a project: copy a whole <article> block and change the texts and image paths.
+             To add a photo: add one more <li class="slide"> with an <img>. -->
+        <section id="interiors" class="page-section tinted">
+            <h2 class="section-title"><span class="num">02</span>Interiors</h2>
+
+            <article class="project">
+                <div class="carousel" aria-roledescription="carousel" aria-label="Private residence photos">
+                    <ul class="carousel-track">
+                        <li class="slide"><img src="images/interiors/project-1/1.jpg" alt="Private residence — living room" loading="lazy" /></li>
+                        <li class="slide"><img src="images/interiors/project-1/2.jpg" alt="Private residence — kitchen" loading="lazy" /></li>
+                        <li class="slide"><img src="images/interiors/project-1/3.jpg" alt="Private residence — bedroom" loading="lazy" /></li>
+                        <li class="slide"><img src="images/interiors/project-1/4.jpg" alt="Private residence — bathroom" loading="lazy" /></li>
+                    </ul>
+                </div>
+                <div class="project-info">
+                    <span class="project-num">01</span>
+                    <h3>Private residence</h3>
+                    <p class="meta">Location · Year · 180 m²</p>
+                    <p>Short description of the project — the client's brief, the main idea and the key materials used. Warm oak, micro-cement walls and soft indirect light.</p>
+                </div>
+            </article>
+
+            <article class="project reverse">
+                <div class="carousel" aria-roledescription="carousel" aria-label="City apartment photos">
+                    <ul class="carousel-track">
+                        <li class="slide"><img src="images/interiors/project-2/1.jpg" alt="City apartment — living area" loading="lazy" /></li>
+                        <li class="slide"><img src="images/interiors/project-2/2.jpg" alt="City apartment — dining" loading="lazy" /></li>
+                        <li class="slide"><img src="images/interiors/project-2/3.jpg" alt="City apartment — bedroom" loading="lazy" /></li>
+                        <li class="slide"><img src="images/interiors/project-2/4.jpg" alt="City apartment — details" loading="lazy" /></li>
+                    </ul>
+                </div>
+                <div class="project-info">
+                    <span class="project-num">02</span>
+                    <h3>City apartment</h3>
+                    <p class="meta">Location · Year · 95 m²</p>
+                    <p>Short description of the project — the client's brief, the main idea and the key materials used.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ EXTERIORS ============ -->
+        <section id="exteriors" class="page-section">
+            <h2 class="section-title"><span class="num">03</span>Exteriors</h2>
+
+            <article class="project">
+                <div class="carousel" aria-roledescription="carousel" aria-label="Mountain house photos">
+                    <ul class="carousel-track">
+                        <li class="slide"><img src="images/exteriors/project-1/1.jpg" alt="Mountain house — front facade" loading="lazy" /></li>
+                        <li class="slide"><img src="images/exteriors/project-1/2.jpg" alt="Mountain house — terrace" loading="lazy" /></li>
+                        <li class="slide"><img src="images/exteriors/project-1/3.jpg" alt="Mountain house — entrance" loading="lazy" /></li>
+                        <li class="slide"><img src="images/exteriors/project-1/4.jpg" alt="Mountain house — evening view" loading="lazy" /></li>
+                    </ul>
+                </div>
+                <div class="project-info">
+                    <span class="project-num">01</span>
+                    <h3>Mountain house</h3>
+                    <p class="meta">Location · Year</p>
+                    <p>Short description of the project — how the building sits in its surroundings, the facade materials and the outdoor spaces.</p>
+                </div>
+            </article>
+
+            <article class="project reverse">
+                <div class="carousel" aria-roledescription="carousel" aria-label="Family house photos">
+                    <ul class="carousel-track">
+                        <li class="slide"><img src="images/exteriors/project-2/1.jpg" alt="Family house — street view" loading="lazy" /></li>
+                        <li class="slide"><img src="images/exteriors/project-2/2.jpg" alt="Family house — garden" loading="lazy" /></li>
+                        <li class="slide"><img src="images/exteriors/project-2/3.jpg" alt="Family house — pool terrace" loading="lazy" /></li>
+                        <li class="slide"><img src="images/exteriors/project-2/4.jpg" alt="Family house — details" loading="lazy" /></li>
+                    </ul>
+                </div>
+                <div class="project-info">
+                    <span class="project-num">02</span>
+                    <h3>Family house</h3>
+                    <p class="meta">Location · Year</p>
+                    <p>Short description of the project — how the building sits in its surroundings, the facade materials and the outdoor spaces.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- ============ CONTACTS ============ -->
+        <section id="contact" class="page-section contact">
+            <h2 class="section-title"><span class="num">04</span>Contacts</h2>
+
+            <div class="contact-grid">
+                <div class="contact-lead">
+                    <p class="big">Let's talk about<br />your space.</p>
+                    <p>Tell me a little about your project — the place, the size and what you imagine. I'll get back to you within a couple of days.</p>
+                    <a class="button" href="mailto:ptr.nacheva@gmail.com?subject=Project%20inquiry">Write to me</a>
+                </div>
+
+                <dl class="contact-list">
+                    <div><dt>E-mail</dt><dd><a href="mailto:ptr.nacheva@gmail.com">ptr.nacheva@gmail.com</a></dd></div>
+                    <div><dt>Phone</dt><dd><a href="tel:+359895201094">0895 201 094</a></dd></div>
+                    <div><dt>Studio</dt><dd><a href="https://maps.app.goo.gl/CbQc51G81A4aeYiP8" target="_blank" rel="noopener">ul. &bdquo;Studentska&ldquo;, Levski,<br />Primorski, 9010 Varna</a></dd></div>
+                    <div><dt>Follow</dt><dd><a href="https://www.instagram.com/bor4.d" target="_blank" rel="noopener">Instagram</a> &nbsp;/&nbsp; <a href="https://www.facebook.com/bor4d" target="_blank" rel="noopener">Facebook</a></dd></div>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>&copy; <span id="year">2026</span> bor4 DESIGN by Petra Nacheva</span>
+        <a href="#home">Back to top &uarr;</a>
+    </footer>
+
+    <!-- Fullscreen photo viewer (opens when a carousel photo is clicked) -->
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+        <button class="lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="lb-prev arrow" type="button" aria-label="Previous photo"></button>
+        <img alt="" />
+        <button class="lb-next arrow" type="button" aria-label="Next photo"></button>
+        <span class="lb-counter"></span>
+    </dialog>
+
+    <script src="site.js"></script>
+</body>
+</html>
