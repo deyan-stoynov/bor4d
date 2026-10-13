@@ -241,10 +241,16 @@ section { scroll-margin-top: var(--header-h); }
     display: block;
 }
 
+.content {
+    position: relative;
+}
+
+/* icons sit just under the bottom-right corner of the room in pic.webp
+   (the room ends 15.4% from the image's right edge and 81.7% from its top) */
 .social {
     position: absolute;
-    right: 6%;
-    bottom: 7%;
+    right: 15.4%;
+    top: calc(81.7% + 12px);
     display: flex;
     gap: 6px;
 }
@@ -298,14 +304,7 @@ section { scroll-margin-top: var(--header-h); }
         background: var(--line);
     }
 
-    .section-title .num {
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: .1em;
-        color: var(--text-soft);
-        align-self: flex-start;
-        margin-top: .6em;
-    }
+
 
 .section-intro {
     max-width: 560px;
@@ -736,7 +735,7 @@ section { scroll-margin-top: var(--header-h); }
             padding: 14px 0;
         }
 
-    .social { right: 20px; bottom: 16px; }
+    .social { top: calc(81.7% + 8px); }
     .social a { width: 30px; height: 30px; }
 
     .page-section { padding: 72px var(--gutter); }
