@@ -5,7 +5,9 @@ const navMenu = document.querySelector("#nav-menu");
 function setMenu(open) {
     navMenu.classList.toggle("is-open", open);
     burger.setAttribute("aria-expanded", open);
-    burger.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+    // the label is translated by i18n.js; switch which text key it uses
+    burger.dataset.i18nAttr = `aria-label:${open ? "ui.menuClose" : "ui.menuOpen"}`;
+    i18n.apply(burger);
     burger.querySelector("span").innerHTML = open ? "&times;" : "&#9776;";
 }
 
@@ -53,19 +55,22 @@ document.querySelectorAll(".carousel").forEach(root => {
     const controls = document.createElement("div");
     controls.className = "carousel-controls";
     controls.innerHTML = `
-        <button class="arrow prev" type="button" aria-label="Previous photo"></button>
+        <button class="arrow prev" type="button" data-i18n-attr="aria-label:ui.prev"></button>
         <span class="counter" aria-live="polite"></span>
-        <button class="arrow next" type="button" aria-label="Next photo"></button>`;
+        <button class="arrow next" type="button" data-i18n-attr="aria-label:ui.next"></button>`;
     const dots = document.createElement("div");
     dots.className = "carousel-dots";
     slides.forEach((_, i) => {
         const b = document.createElement("button");
         b.type = "button";
-        b.setAttribute("aria-label", `Photo ${i + 1}`);
+        b.dataset.i18nAttr = "aria-label:ui.photo";      // "Photo {n}" / "Снимка {n}"
+        b.dataset.i18nVars = JSON.stringify({ n: i + 1 });
         b.addEventListener("click", () => go(i));
         dots.appendChild(b);
     });
     root.append(dots, controls);
+    i18n.apply(dots);
+    i18n.apply(controls);
 
     const counter = controls.querySelector(".counter");
 

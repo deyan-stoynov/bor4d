@@ -94,6 +94,19 @@
     font-display: swap;
 }
 
+/* Aeonik has no Cyrillic letters, so Bulgarian text uses Onest: a free (OFL) grotesk
+   in the same spirit, all weights in one variable file. The browser only downloads it
+   when the page shows Cyrillic text. To self-host later, download the file into fonts/
+   and change the url. */
+@font-face {
+    font-family: 'Onest Cyrillic';
+    src: url('https://cdn.jsdelivr.net/fontsource/fonts/onest:vf@5/cyrillic-wght-normal.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
 /* ================= Base ================= */
 :root {
     --text: #5B5B5B;
@@ -103,7 +116,12 @@
     --white: #fff;
     --header-h: 72px;
     --gutter: 32px;
+    /* Latin letters in Aeonik, Cyrillic letters in Onest */
+    --font: Aeonik, 'Onest Cyrillic', sans-serif;
 }
+
+/* while switching to English on load (see the script in <head>) */
+.i18n-pending body { visibility: hidden; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -114,7 +132,7 @@ html {
 body {
     max-width: 1400px;
     margin: 0 auto;
-    font-family: Aeonik, sans-serif;
+    font-family: var(--font);
     font-weight: 300;
     color: var(--text);
     background: var(--white);
@@ -150,7 +168,7 @@ section { scroll-margin-top: var(--header-h); }
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 16px;
     padding: 16px var(--gutter);
     position: relative;
     min-height: var(--header-h);
@@ -159,12 +177,14 @@ section { scroll-margin-top: var(--header-h); }
 .logo {
     font-weight: 300;
     font-size: 22px;
-    font-family: 'Aeonik';
+    font-family: var(--font);
     color: #5B5B5B;
     text-decoration: none;
     display: flex;
     align-items: baseline;
 }
+
+    .logo { margin-right: auto; }
 
     .logo .text1 {
         margin: 0 10px 0 4px;
@@ -185,7 +205,7 @@ section { scroll-margin-top: var(--header-h); }
 .nav-menu {
     font-weight: 300;
     font-size: 20px;
-    font-family: 'Aeonik';
+    font-family: var(--font);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -211,6 +231,37 @@ section { scroll-margin-top: var(--header-h); }
 .site-header.scrolled .nav-menu li.active a {
     background-color: var(--tint);
 }
+
+/* ---------- Language switch (BG / EN) ---------- */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 15px;
+    letter-spacing: .06em;
+    color: var(--text-soft);
+}
+
+    .lang-switch button {
+        border: 0;
+        background: none;
+        padding: 4px 6px;
+        font: inherit;
+        letter-spacing: inherit;
+        color: var(--text-soft);
+        cursor: pointer;
+        transition: color .2s;
+    }
+
+        .lang-switch button:hover { color: var(--text); }
+
+        .lang-switch button[aria-pressed="true"] {
+            color: var(--text);
+            font-weight: 400;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 1px;
+        }
 
 .burger {
     display: none;
@@ -694,6 +745,12 @@ section { scroll-margin-top: var(--header-h); }
     .nav-menu a { padding: 2px 10px; }
 }
 
+/* narrow laptops / tablets: not enough room for the full logo, the menu and BG / EN */
+@media (min-width: 769px) and (max-width: 960px) {
+    .logo .text2 { display: none; }
+    .nav-menu a { padding: 2px 7px; }
+}
+
 /* ================= Mobile ================= */
 @media (max-width: 768px) {
     :root {
@@ -709,6 +766,7 @@ section { scroll-margin-top: var(--header-h); }
 
     .burger {
         display: block;
+        order: 1;   /* after the BG / EN switch */
     }
 
     .nav-menu {
