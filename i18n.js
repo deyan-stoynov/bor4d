@@ -139,7 +139,7 @@ const I18N = {
         "contact.email": "E-mail",
         "contact.phone": "Phone",
         "contact.studio": "Studio",
-        "contact.address": "ul. „Studentska“, Levski,<br />Primorski, 9010 Varna",
+        "contact.address": "Studentska Str., Levski,<br />Primorski, 9010 Varna",
         "contact.follow": "Follow",
 
         // footer
