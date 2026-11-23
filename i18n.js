@@ -257,3 +257,4 @@ Designed in a contemporary classic style, the interior combines soft, natural to
 
     setLang(startLang(), false);
 })();
+
