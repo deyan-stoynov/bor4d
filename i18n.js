@@ -33,8 +33,7 @@ const I18N = {
         // menu
         "nav.label": "Main navigation",
         "nav.services": "Services",
-        "nav.interiors": "Interiors",
-        "nav.exteriors": "Exteriors",
+        "nav.interiors": "Projects",
         "nav.contact": "Contacts",
 
         // home
@@ -53,7 +52,7 @@ const I18N = {
         "services.s4.text": "Technical drawings, sourcing and on-site coordination with contractors through to completion.",
 
         // interiors
-        "interiors.title": "Interiors",
+        "interiors.title": "Projects",
 
         "int1.photos": "Private residence photos",
         "int1.alt1": "Private residence — living room",
