@@ -119,8 +119,8 @@ const I18N = {
         "int4.alt14": "Apartment City — master bedroom",
         "int4.title": "Apartment City",
         "int4.meta": "Apartment City",
-        "int4.text": "Interior design project for an apartment in a residential building in the heart of Varna, featuring an open-plan living and dining area, two bedrooms, a walk-in closet, two bathrooms with toilets, and an entrance hall.
-Designed in a contemporary classic style, the interior combines soft, natural tones, refined decorative details, and a warm, inviting atmosphere.",
+        "int4.text": "Interior design project for an apartment in a residential building in the heart of Varna, featuring an open-plan living and dining area, two bedrooms, a walk-in closet, two bathrooms with toilets, and an entrance hall. Designed in a contemporary classic style, the interior combines soft, natural tones, refined decorative details, and a warm, inviting atmosphere.",
+
 
         // exteriors
         "exteriors.title": "Exteriors",
