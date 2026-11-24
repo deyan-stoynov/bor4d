@@ -105,7 +105,7 @@ const I18N = {
         "int4.alt1": "Apartment City",
         "int4.alt1": "Apartment City — living room",
         "int4.alt2": "Apartment City — living and dining area",
-        "int4.alt3": "Apartment City — fireplace and TV wall",
+        "int4.alt3": "Apartment City — living room",
         "int4.alt4": "Apartment City — living room with sea view",
         "int4.alt5": "Apartment City — hallway",
         "int4.alt6": "Apartment City — hallway wardrobe with round mirror",
